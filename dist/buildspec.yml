@@ -1,29 +1,100 @@
 version: 0.2
+
+run-as: Linux-user-name
+
+env:
+  shell: shell-tag
+  variables:
+    key: "value"
+  parameter-store:
+  
+    key: "value"
+  exported-variables:
+    - variable
+    - variable
+  secrets-manager:
+    key: secret-id:json-key:version-stage:version-id
+  git-credential-helper: no | yes
+
+proxy:
+  upload-artifacts: no | yes
+  logs: no | yes
+
+batch:
+  fast-fail: false | true
+  # build-list:
+  # build-matrix:
+  # build-graph:
+        
 phases:
+  install:
+    run-as: Linux-user-name
+    on-failure: ABORT | CONTINUE
+    runtime-versions:
+      runtime: version
+    commands:
+      - command
+      - command
+    finally:
+      - command
+      - command
   pre_build:
+    run-as: Linux-user-name
+    on-failure: ABORT | CONTINUE
     commands:
-      - echo Logging in to Amazon s3...
-      - aws --version
-      - $(aws s3 get-login --region $AWS_DEFAULT_REGION --no-include-email)
-      - REPOSITORY_URI=012345678910.dkr.s3.us-east-1.amazonaws.com/base-image
-      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
-      - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
+      - command
+      - command
+    finally:
+      - command
+      - command
   build:
+    run-as: Linux-user-name
+    on-failure: ABORT | CONTINUE
     commands:
-      - echo Build started on `date`
-      - echo building the Jar file
-      - mvn clean install
-      - echo Building the Docker image...
-      - docker build -t $REPOSITORY_URI:latest .
-      - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
+      - command
+      - command
+    finally:
+      - command
+      - command
   post_build:
+    run-as: Linux-user-name
+    on-failure: ABORT | CONTINUE
     commands:
-      - echo Build completed on `date`
-      - echo Pushing the Docker images...
-      - docker push $REPOSITORY_URI:latest
-      - docker push $REPOSITORY_URI:$IMAGE_TAG
-      - echo Writing image definitions file...
-      - printf '[{"name":"cicd-container","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
-      - cat imagedefinitions.json
+      - command
+      - command
+    finally:
+      - command
+      - command
+reports:
+  report-group-name-or-arn:
+    files:
+      - location
+      - location
+    base-directory: location
+    discard-paths: no | yes
+    file-format: report-format
 artifacts:
-    files: imagedefinitions.json
+  files:
+    - location
+    - location
+  name: artifact-name
+  discard-paths: no | yes
+  base-directory: location
+  exclude-paths: excluded paths
+  enable-symlinks: no | yes
+  s3-prefix: prefix
+  secondary-artifacts:
+    artifactIdentifier:
+      files:
+        - location
+        - location
+      name: secondary-artifact-name
+      discard-paths: no | yes
+      base-directory: location
+        - location
+        - location
+      
+cache:
+  paths:
+    - path
+    - path
