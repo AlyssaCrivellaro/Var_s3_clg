@@ -1,0 +1,241 @@
+/* 
+ * Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved. 
+ * SPDX-License-Identifier: Apache-2.0 
+ * 
+ * This style sheet was generated using "scripts/build/generateIcons.ts". 
+ */ 
+
+@font-face {
+  font-display: auto;
+  font-family: "aws-toolkit-icons";
+  font-style: normal;
+  font-weight: 400;
+  
+  src: url("../fonts/aws-toolkit-icons.woff?1666291058797") format("woff"); 
+}
+
+.icon {
+  display: inline-block;
+  font-family: "aws-toolkit-icons";
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -0.0667em;
+}
+
+.icon-xs {
+  font-size: 0.75em;
+}
+
+.icon-sm {
+  font-size: 0.875em;
+}
+
+.icon-1x {
+  font-size: 1em;
+}
+
+.icon-2x {
+  font-size: 2em;
+}
+
+.icon-3x {
+  font-size: 3em;
+}
+
+.icon-4x {
+  font-size: 4em;
+}
+
+.icon-5x {
+  font-size: 5em;
+}
+
+.icon-6x {
+  font-size: 6em;
+}
+
+.icon-7x {
+  font-size: 7em;
+}
+
+.icon-8x {
+  font-size: 8em;
+}
+
+.icon-9x {
+  font-size: 9em;
+}
+
+.icon-10x {
+  font-size: 10em;
+}
+
+.icon-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.icon-border {
+  border: solid 0.08em #eee;
+  border-radius: 0.1em;
+  padding: 0.2em 0.25em 0.15em;
+}
+
+.icon-pull-left {
+  float: left;
+}
+
+.icon-pull-right {
+  float: right;
+}
+
+.icon.icon-pull-left {
+  margin-right: 0.3em;
+}
+
+.icon.icon-pull-right {
+  margin-left: 0.3em;
+}
+
+
+.icon-aws-apprunner-service::before {
+  content: "\e000";
+}
+
+.icon-aws-cdk-logo::before {
+  content: "\e001";
+}
+
+.icon-aws-cloudformation-stack::before {
+  content: "\e002";
+}
+
+.icon-aws-cloudwatch-log-group::before {
+  content: "\e003";
+}
+
+.icon-aws-ecr-registry::before {
+  content: "\e004";
+}
+
+.icon-aws-ecs-cluster::before {
+  content: "\e005";
+}
+
+.icon-aws-ecs-container::before {
+  content: "\e006";
+}
+
+.icon-aws-ecs-service::before {
+  content: "\e007";
+}
+
+.icon-aws-generic-attach-file::before {
+  content: "\e008";
+}
+
+.icon-aws-iot-certificate::before {
+  content: "\e009";
+}
+
+.icon-aws-iot-policy::before {
+  content: "\e00a";
+}
+
+.icon-aws-iot-thing::before {
+  content: "\e00b";
+}
+
+.icon-aws-lambda-function::before {
+  content: "\e00c";
+}
+
+.icon-aws-s3-bucket::before {
+  content: "\e00d";
+}
+
+.icon-aws-s3-create-bucket::before {
+  content: "\e00e";
+}
+
+.icon-aws-schemas-registry::before {
+  content: "\e00f";
+}
+
+.icon-aws-schemas-schema::before {
+  content: "\e010";
+}
+
+.icon-aws-stepfunctions-preview::before {
+  content: "\e011";
+}
+
+.icon-vscode-add::before {
+  content: "\e012";
+}
+
+.icon-vscode-chevron-up::before {
+  content: "\e013";
+}
+
+.icon-vscode-close::before {
+  content: "\e014";
+}
+
+.icon-vscode-debug-pause::before {
+  content: "\e015";
+}
+
+.icon-vscode-debug-start::before {
+  content: "\e016";
+}
+
+.icon-vscode-edit::before {
+  content: "\e017";
+}
+
+.icon-vscode-file::before {
+  content: "\e018";
+}
+
+.icon-vscode-folder::before {
+  content: "\e019";
+}
+
+.icon-vscode-gear::before {
+  content: "\e01a";
+}
+
+.icon-vscode-loading::before {
+  content: "\e01b";
+}
+
+.icon-vscode-mail::before {
+  content: "\e01c";
+}
+
+.icon-vscode-megaphone::before {
+  content: "\e01d";
+}
+
+.icon-vscode-refresh::before {
+  content: "\e01e";
+}
+
+.icon-vscode-sync::before {
+  content: "\e01f";
+}
+
+.icon-vscode-sync-ignored::before {
+  content: "\e020";
+}

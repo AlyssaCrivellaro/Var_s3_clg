@@ -1,0 +1,170 @@
+{
+  "Make a request": {
+    "prefix": "!api",
+    "body": [
+      "- !api",
+      "  title: ${1}",
+      "  method: ${2|GET,POST,PUT,PATCH,DELETE,HEAD|}",
+      "  baseURL: $3",
+      "  url: $4",
+      "  validate:",
+      "    - !status 200,204"
+    ],
+    "description": "Make request to API"
+  },
+  "Make a GET request": {
+    "prefix": "!get",
+    "body": [
+      "- !get",
+      "  title: ${1}",
+      "  url: $2",
+      "  validate:",
+      "    - !status 200,204"
+    ],
+    "description": "Make a GET request"
+  },
+  "Make a POST request": {
+    "prefix": "!post",
+    "body": [
+      "- !post",
+      "  title: ${1}",
+      "  url: $2",
+      "  body: $3",
+      "  validate:",
+      "    - !status 200,204"
+    ],
+    "description": "Make a POST request"
+  },
+  "Make a PUT request": {
+    "prefix": "!put",
+    "body": [
+      "- !put",
+      "  title: ${1}",
+      "  url: $2",
+      "  body: $3",
+      "  validate:",
+      "    - !status 200,204"
+    ],
+    "description": "Make a PUT request"
+  },
+  "Make a PATCH request": {
+    "prefix": "!patch",
+    "body": [
+      "- !patch",
+      "  title: ${1}",
+      "  url: $2",
+      "  body: $3",
+      "  validate:",
+      "    - !status 200,204"
+    ],
+    "description": "Make a PATCH request"
+  },
+  "Make a DELETE request": {
+    "prefix": "!delete",
+    "body": [
+      "- !delete",
+      "  title: ${1}",
+      "  url: $2",
+      "  validate:",
+      "    - !status 200,204"
+    ],
+    "description": "Make a DELETE request"
+  },
+  "Make a HEAD request": {
+    "prefix": "!head",
+    "body": [
+      "- !head",
+      "  title: ${1}",
+      "  url: $2",
+      "  validate:",
+      "    - !status 200,204"
+    ],
+    "description": "Make a HEAD request"
+  },
+  "Create group steps": {
+    "prefix": "!group",
+    "body": [
+      "- !group",
+      "  title: ${1}",
+      "  description: ${2}",
+      "  vars: ${3}",
+      "  steps:",
+      "    - $4"
+    ],
+    "description": "Create group steps"
+  },
+  "Create util function": {
+    "prefix": "!utils",
+    "body": [
+      "- !utils",
+      "  func: ${1}",
+      "  script: |",
+      "    (arg) => {",
+      "      $0",
+      "    }"
+    ],
+    "description": "Create util function"
+  },
+  "Create validation": {
+    "prefix": "!validate",
+    "body": [
+      "- !validate",
+      "  title: ${1}",
+      "  func: ${2|match,in,schema,length|}",
+      "  args:",
+      "    - $3",
+      "    - $4"
+    ],
+    "description": "Create validation"
+  },
+  "Create external execution": {
+    "prefix": "!exec",
+    "body": [
+      "- !exec",
+      "  title: ${1}",
+      "  var: $2",
+      "  args: $0"
+    ],
+    "description": "Run external execution"
+  },
+  "Create input": {
+    "prefix": "!input",
+    "body": [
+      "- !input",
+      "  title: ${1}",
+      "  required: ${2:false}",
+      "  var: $0"
+    ],
+    "description": "Input from keyboard"
+  },
+  "Create a testcase": {
+    "prefix": "!testcase",
+    "body": [
+      "title: $1",
+      "version: ${2:1.0.0}",
+      "description: $3",
+      "developer: $4",
+      "servers:",
+      "  - url: $5",
+      "    description: Development",
+      "# debug: false",
+      "docs:",
+      "  headers: []",
+      "  responseHeaders: [\"content-type\"]",
+      "  output:",
+      "    - !output-swagger",
+      "      saveTo: doc.swagger.yaml",
+      "    - !output-md",
+      "      saveTo: doc.md",
+      "vars:",
+      "  url: $5",
+      "templates:",
+      "  - !api",
+      "    ->: base",
+      "    baseURL: \\${url}",
+      "steps:",
+      "  $0"
+    ],
+    "description": "Create a testcase"
+  }
+}
