@@ -1,6 +1,5 @@
-Version: 0.1
+Version: 0.2
 
-Env:
 Variables:
     CACHECONTROL: 
     S3_BUCKET: “{{s3_bucket_sa-east-1}}”
