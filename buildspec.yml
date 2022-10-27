@@ -1,9 +1,9 @@
-Version: 0.2
+Version: 0.1
 
 Env:
 Variables:
     CACHECONTROL: 
-    S3_BUCKET: “{{s3_bucket_url}}”
+    S3_BUCKET: “{{s3_bucket_sa-east-1}}”
     BUILD_FOLDER: “dist”
 Phases:
   Install:
@@ -15,8 +15,8 @@ commands:
   - npm install -g@startbootstrap/cli
 build:
   commands:
-   -	echo Build started
-   -	nybuild
+    - echo Build started on `date`
+    - mvn install
 artifacts:
 files:
 - ‘**/*’
