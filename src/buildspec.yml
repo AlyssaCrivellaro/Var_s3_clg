@@ -8,7 +8,7 @@ Variables:
 Phases:
   Install:
     Runtime-version:
-      Nodejs:14
+      packageJSON
 commands:
   - echo installing source NPM dependencies…
   - npm install
