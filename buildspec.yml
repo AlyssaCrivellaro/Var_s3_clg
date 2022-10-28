@@ -11,7 +11,12 @@ phases:
     - npm test
     - echo "building.."
     - npm build
+build:
+  commands:
+    - echo Build started on `date`
+    - mvn install
 artifacts:
-  base-directory: build
   files:
-    - '**/*'
+  - '**/*'
+  base-directory: 'dist'
+  discard-paths: yes
