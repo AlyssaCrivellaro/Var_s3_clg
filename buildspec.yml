@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 version: 0.2
 phases:
   install:
@@ -11,31 +10,7 @@ phases:
     - echo "building.."
     - npm run build
   artifacts:
-  files:
-  - '**/*'
-  base-directory: 'dist*'
-  discard-paths: yes
-=======
-version: 0.2
-phases:
-  install:
-    runtime-version:
-    nodejs: 12
-  build:
-    commands:
-    - echo "Installing dependencies.."
-    - npm install
-    - echo "Unit testing.."
-    - npm test
-    - echo "building.."
-    - npm build
-build:
-  commands:
-    - echo Build started on `date`
-    - mvn install
-artifacts:
-  files:
-  - '**/*'
-  base-directory: 'dist'
-  discard-paths: yes
->>>>>>> f6d5cd9515bfd99ca0121890cc1e323e81399106
+    files:
+    - '**/*'
+    base-directory: 'dist*'
+    discard-paths: yes
