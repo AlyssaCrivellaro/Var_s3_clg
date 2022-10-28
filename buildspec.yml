@@ -1,23 +1,17 @@
-Version: 0.2
-
-Variables:
-    CACHECONTROL: 
-    S3_BUCKET: “{{s3_bucket_sa-east-1}}”
-    BUILD_FOLDER: “dist”
-Phases:
-  Install:
-    Runtime-version:
-      packageJSON
-commands:
-  - echo installing source NPM dependencies…
-  - npm install
-  - npm install -g@startbootstrap/cli
+versio: 0.2
+phases:
+instal:
+runtime-version:
+nodejs: 12
 build:
-  commands:
-    - echo Build started on `date`
-    - mvn install
+commands:
+- echo "Installing dependencies.."
+- npm install
+- echo "Unit testing.."
+- npm test
+- echo "building.."
+- npm build
 artifacts:
+base-directory: build
 files:
-- ‘**/*’
-base-directory: ‘dist’
-discard-paths: yes
+- '**/*'
