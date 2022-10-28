@@ -1,0 +1,16 @@
+version: 0.2
+phases:
+  install:
+    runtime-version:
+    nodejs: 12
+  build:
+    commands:
+    - echo "Installing dependencies.."
+    - npm install
+    - echo "building.."
+    - npm run build
+  artifacts:
+  files:
+  - '**/*'
+  base-directory: 'dist*'
+  discard-paths: yes
