@@ -1,17 +1,17 @@
 versio: 0.2
 phases:
-instal:
-runtime-version:
-nodejs: 12
-build:
-commands:
-- echo "Installing dependencies.."
-- npm install
-- echo "Unit testing.."
-- npm test
-- echo "building.."
-- npm build
+  instal:
+    runtime-version:
+    nodejs: 12
+  build:
+  commands:
+    - echo "Installing dependencies.."
+    - npm install
+    - echo "Unit testing.."
+    - npm test
+    - echo "building.."
+    - npm build
 artifacts:
-base-directory: build
-files:
-- '**/*'
+  base-directory: build
+  files:
+    - '**/*'
