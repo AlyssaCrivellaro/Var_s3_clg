@@ -1,4 +1,0 @@
-- Dev:
-  - Build: yarn build
-  - Publish: yarn pub
-  - Commit: yarn commit
